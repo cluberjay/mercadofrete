@@ -8,7 +8,7 @@ body {
  border-top-width: 2rem;
  border-top-style: solid;
  border-top-color:  #fff159;;
- height: 160vh;
+ height: auto;
 }
 
 header {
@@ -272,7 +272,7 @@ h2 {
 }
 
  footer {
-    margin-top: 50rem;
+    margin-top: 68rem;
     border-top-width: 2rem; 
     border-top-style: solid;  
     border-top-color:  #fff159;
