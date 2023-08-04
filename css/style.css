@@ -101,21 +101,6 @@ li {
     margin-top: .5rem;
 }
 
-#opcoes-de-calculo {
-    position: absolute;
-    top: 20rem;
-    right: 25vw;
-    left: 25vw;
-    z-index: 3;
-    width: 50vw;
-    padding-left: 2rem;
-}
-
-#opcoes-de-calculo button {
-    border: none;
-    background: none;
-}
-
 main {
     position: absolute;
     z-index: 2;
@@ -155,13 +140,14 @@ main {
     font-size: small;
 }
 
-#tipo-de-motos {
-    margin-bottom: 25px;
-}
-
 #calculos {
     display:flex;
     flex-direction: column;
+}
+
+form label h2 {
+   margin-top: -20px;
+   margin-bottom: 35px;
 }
 
  [type = "text"] {
@@ -392,30 +378,17 @@ h2 {
         color:#000;
     }
 
-    #opcoes-de-calculo {
-        position:absolute;
-        z-index: 5;
-        display: inline-flex;
-        justify-content: space-around;
-        margin-top: -2rem;
-        margin-left: -2rem;
-        padding-left: 0;
-    }
-
-    #opcoes-de-calculo button {
-        font-size: large;
-        letter-spacing: .25rem;
-    }
-
-    #opcoes-de-calculo button:hover {
-        color:#ea1d2c;
-        cursor: pointer;
-    }
 
     #sessao-calculos {
         max-width: 500px;
         margin:auto;
         margin-top: 1.5rem;
+    }
+
+    form label h2 {
+    margin: 0;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
     }
 
     #calculos input {
