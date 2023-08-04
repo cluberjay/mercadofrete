@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="js/script.js" defer></script>
+    <title>Calculo de frete</title>
+</head>
+<body>
+   
+        <header>
+           
+            <img class="imagens" src="img/logo-caminhao.jpg" alt="logomarca do site">
+            <h1>Mercado Frete</h1>
+            <div class="img-desktop"></div>
+            <div class="backdrop hidden"></div>
+           <nav>
+               <button type="button" id="menu"><i class="bi bi-list" ></i></button>
+               <ul class="menu-mobile">
+                       <li><a href="rdos-calculos.html" target="_blank">Dica para os cálculos</a></li>
+                       <li><a href="protecao-no-transito.html" target="_blank">Proteção no trânsito</a></li>
+                       <li><a href="tutorial.html" target="_blank">Tutorial GPS</a></li>
+                       <li><a href="sobre.html" target="_blank">Sobre nós</a></li>
+                       <li>
+                        <details id="contatos">
+                            <summary>Contatos</summary>
+                            <a href="https://wa.me/14996797612" target="_blank"><i class="bi bi-whatsapp icones-contatos"><span>(14)99679-7612</span></i></a>
+                            <i class="bi bi-envelope icones-contatos"><span>djjuliogoncalve@gmail.com</span></i>
+                        </details>
+                       </li>
+                </ul>
+              
+           </nav>
+        </header>
+        <div id="auxiliar">
+        <main id="container-principal">
+            <button type="button" id="botao-de-fechar-calculos" form="calculos"><i class="bi bi-x"></i></button>
+            
+        
+            <section id="sessao-calculos">
+               <form id="calculos">
+                <input type="text" id="distancia-do-frete" placeholder="Quantos km da o frete?">
+                <input type="text" id="eficiencia-do-combustivel" placeholder="Quantos seu veiculo faz por litro?">
+                <input type="text" id="combustivel" placeholder="Preço do combustivel?">
+                <input type="text" id="oleo" placeholder="Preço do oleo de motor?">
+                <input type="text" id="eficiencia-do-oleo" placeholder="Quantos km dura o óleo?">
+                <input type="text" id="pneu" placeholder="Qual o valor dos Pneu?">
+                <input type="text" id="eficiencia-do-pneu" placeholder="Quantos km dura o pneu?">
+                <input type="text" id="frete" placeholder="Qual o valor do frete"">
+                <button type="button" id="botao-calc-da-taxa">Calcular</button>
+               </form>
+            </section>
+             
+            <div class="container-dos-custos hidden">
+                <table>
+                    <caption>Custos do frete</caption>
+                    <thead id="cabecalho-da-tabela">
+                        <tr id="linha-de-cabecalho">
+                            <th id="cabecalho-de-itens">Itens</th>
+                            <th id="cabecalho-de-custos">Gastos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td class="celula-de-itens">Diesel</td>
+                          <td class="cifrao">R$:</td>
+                          <td><var id="custo-de-combustivel"></var></td>
+                        </tr>
+                        <tr>
+                            <td class="celula-de-itens">Óleo</td>
+                            <td class="cifrao">R$:</td>
+                            <td><var id="custo-de-oleo"></var></td>
+                        </tr>
+                        <tr>
+                            <td class="celula-de-itens">Pneu</td>
+                            <td class="cifrao">R$:</td>
+                            <td><var id="custo-de-pneu"></var></td>
+                        </tr>
+                    </tbody>
+                    <tfoot id="rodape-dos-custos">
+                        <tr id="linha-do-total">
+                            <td id="celula-do-total" colspan="2">Total dos gastos</td>
+                        </tr>
+                        <tr>
+                            <td id="celula-do-total-de-custos" colspan="2"><span>R$:</span><var id="total-dos-custos"></var></td>
+                        </tr>
+                        <tr>
+                            <td id="celula-de-lucro" colspan="2">Lucro no frete</td>
+                        </tr>
+                        <tr>
+                            <td id="celula-do-total-do-lucro" colspan="2"><span>R$:</span><var id="valor-do-frete"></var></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <button type="button" form="calculos" id ="botao-recalcular">Recalcular</button>
+                <!--<h2>Aqui estão os custos e o lucro real da corrida</h2>
+                <span class="custos">Gas R$:<var id="custo-de-combustivel"></var></span>
+                <span class="custos">Óleo R$:<var id="custo-de-oleo"></var></span>
+                <span class="custos">Pneu R$:<var id="custo-de-pneu"></var></span>
+                <span class="custos">Relação R$:<var id="custo-de-relacao"></var></span>
+                <span class="lucro">Lucro R$:<var id="valor-da-taxa"></var></span>-->
+            </div>
+             
+             <section id="sessao-de-comentarios">
+                <p>Comentários</p>
+                <hr>
+                <textarea name="caixa-de-comentarios" id="comentarios" cols="25" rows="5" form="calculos" placeholder="Deixe seu comentário :"></textarea>
+            </section>
+        </main>
+        </div>
+        <footer>
+          <ul id="lista-de-rede-sociais">
+            <il><a href="#"><i class="bi bi-instagram"></i></a></il>
+            <il><a href="#"><i class="bi bi-facebook"></i></a></il>
+            <il><a href="#"><i class="bi bi-youtube"></i></a></il>
+          </ul>
+
+          <ul id="lista-de-utilidades">
+            <h3 id="Titulo-da-lista-de-utilidades">Utilidades:</h3>
+            <li>Policia</li>
+            <li>SAMU</li>
+            <li><a href="https://www.serasa.com.br" target="_blank">Consultar Nome</a></li>
+          </ul>
+
+          <ul id="lista-de-resposabilidades">
+            <il><a href="privacidade.html" target="_blank">Privacidade</a></il>
+            <il><a href="termos.html" target="_blank">Termos de uso</a></il>
+            <il><a href="cokkies.html" target="_blank">Cookies</a></il>
+          </ul>
+        </footer>
+</body>
+</html>
